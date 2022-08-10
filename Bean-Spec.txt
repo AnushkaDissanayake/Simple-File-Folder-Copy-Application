@@ -1,7 +1,0 @@
-1) All properties should be fully encapsulated. (All properties are private-can be use getters setters set and get values)
-
-2) All naming convention should follow camel case
-
-3)Nor-arg and full arg constructors should be created.
-
-4)Implement Serializable
