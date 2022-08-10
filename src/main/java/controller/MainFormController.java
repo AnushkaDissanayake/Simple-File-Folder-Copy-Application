@@ -93,11 +93,7 @@ public class MainFormController {
                 } else {
                     txtSelectedFiles.setText("No Selected Files");
                 }
-                if (returnDirectoryList !=null){
-                    for(File f:returnDirectoryList){
-                        System.out.println(f.getAbsolutePath());
-                    }
-                }
+
             }
 
         }
@@ -381,7 +377,7 @@ public class MainFormController {
 
                 }else if(f.isFile()){
                     File file = new File(f.getParentFile().getAbsolutePath());
-                    returnDirectoryList.add(file);
+                    returnDirectoryList.add(file); //get  directories of file f
                     returnFileList.add(f); //get all files
                 }
             }
