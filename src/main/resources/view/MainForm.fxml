@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="569.0" prefWidth="627.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <JFXButton fx:id="btnSelectFiles" layoutX="39.0" layoutY="106.0" onAction="#btnSelectFilesOnAction" prefHeight="67.0" prefWidth="149.0" text="Select Files" AnchorPane.leftAnchor="39.0">
+         <font>
+            <Font size="18.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnDir" layoutX="40.0" layoutY="277.0" onAction="#btnDirOnAction" prefHeight="67.0" prefWidth="149.0" text="Select DIR" AnchorPane.leftAnchor="39.0">
+         <font>
+            <Font size="18.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnCopy" layoutX="152.0" layoutY="476.0" onAction="#btnCopyOnAction" prefHeight="67.0" prefWidth="307.0" text="Copy">
+         <font>
+            <Font size="18.0" />
+         </font></JFXButton>
+      <Label layoutX="5.0" layoutY="53.0" text="Select The Source Files             :">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="7.0" layoutY="235.0" text="Select The Destination Folder :">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Rectangle fx:id="recContainer" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" layoutX="10.0" layoutY="436.0" stroke="BLACK" strokeType="INSIDE" width="609.0" />
+      <Rectangle fx:id="recProgressBar" arcHeight="5.0" arcWidth="5.0" fill="#0fdd43" height="24.0" layoutX="10.0" layoutY="436.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="lblFolder" layoutX="227.0" layoutY="286.0" prefHeight="18.0" prefWidth="198.0" text="No folder selected" AnchorPane.leftAnchor="227.0" />
+      <Label fx:id="lblProgress" layoutX="24.0" layoutY="401.0" text="Progress : 0%" />
+      <Label fx:id="lblSize" alignment="CENTER_RIGHT" layoutX="373.0" layoutY="410.0" prefHeight="18.0" prefWidth="236.0" text="0/0 kB" />
+      <Label layoutX="443.0" layoutY="82.0" text="What do you want to copy :" />
+      <JFXRadioButton fx:id="rdoFiles" layoutX="491.0" layoutY="123.0" onAction="#rdoFilesOnAction" text="Files" />
+      <JFXRadioButton fx:id="rdoFolders" layoutX="491.0" layoutY="156.0" onAction="#rdoFoldersOnAction" selected="true" text="Folder" />
+      <JFXTextArea fx:id="txtSelectedFiles" layoutX="223.0" layoutY="123.0" prefHeight="34.0" prefWidth="204.0" text="No Selected Files" />
+      <Label fx:id="lblNumberOfFiles" layoutX="273.0" layoutY="401.0" text="Files 0/0" />
+   </children>
+</AnchorPane>
